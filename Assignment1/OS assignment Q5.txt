@@ -1,0 +1,73 @@
+
+Que 5>
+A>
+lalit@LAPTOP-GUPLKURQ:~$ column  file2.txt -t -s "|"
+  A   B
+A Lalit Kumar
+B Lalit Kumar
+
+B>
+
+lalit@LAPTOP-GUPLKURQ:~$ sort file1.txt
+abc
+bcd
+cde
+def
+efg
+ghi
+ijk
+lalit@LAPTOP-GUPLKURQ:~$ sort -r file1.txt
+ijk
+ghi
+efg
+def
+cde
+bcd
+abc
+
+C>
+lalit@LAPTOP-GUPLKURQ:~$ mkdir .dac.txt
+lalit@LAPTOP-GUPLKURQ:~$ mkdir dac.txt
+lalit@LAPTOP-GUPLKURQ:~$ ls -a
+ .               .bashrc    .file1.sh.swp               .viminfo   cdac      'file.txt M-A'   file2.txt
+ ..              .cache     .local                      ab         dac.txt   'file.txt M-B'   file3.txt
+ .bash_history   .config    .profile                    b          echo       file.txtM-D     file4.txt
+ .bash_logout    .dac.txt   .sudo_as_admin_successful   c          file.txt   file1.txt       file5.txt
+
+D>
+lalit@LAPTOP-GUPLKURQ:~$ ls -t
+ file1.txt   file2.txt   ab   file5.txt   file4.txt    'file.txt M-B'   echo   c
+ dac.txt     file.txt    b    file3.txt   file.txtM-D  'file.txt M-A'   cdac
+lalit@LAPTOP-GUPLKURQ:~$ ls -rt
+ c      echo           'file.txt M-B'   file4.txt   file5.txt   ab         file2.txt   file1.txt
+ cdac  'file.txt M-A'   file.txtM-D     file3.txt   b           file.txt   dac.txt
+lalit@LAPTOP-GUPLKURQ:~$ ls -lt
+
+E>
+lalit@LAPTOP-GUPLKURQ:~$ ls -r
+ file5.txt   file3.txt   file1.txt    'file.txt M-B'   file.txt   dac.txt   c   ab
+ file4.txt   file2.txt   file.txtM-D  'file.txt M-A'   echo       cdac      b
+
+F>
+lalit@LAPTOP-GUPLKURQ:~$ ls -l
+total 0
+drwxrwxrwx 1 lalit lalit 4096 Sep  8 23:20  ab
+drwxrwxrwx 1 lalit lalit 4096 Sep  8 23:20  b
+drwxrwxrwx 1 lalit lalit 4096 Sep  7 23:03  c
+drwxrwxrwx 1 lalit lalit 4096 Sep  7 23:06  cdac
+drwxrwxrwx 1 lalit lalit 4096 Sep  9 00:04  dac.txt
+-rw-rw-rw- 1 lalit lalit    0 Sep  8 17:19  echo
+-rw-rw-rw- 1 lalit lalit  102 Sep  8 23:42  file.txt
+-rw-rw-rw- 1 lalit lalit   21 Sep  8 23:02 'file.txt M-A'
+-rw-rw-rw- 1 lalit lalit   25 Sep  8 23:05 'file.txt M-B'
+-rw-rw-rw- 1 lalit lalit   20 Sep  8 23:12  file.txtM-D
+-rwxrwxrwx 1 lalit lalit   29 Sep  9 00:08  file1.txt
+-rw-rw-rw- 1 lalit lalit   36 Sep  8 23:56  file2.txt
+-rw-rw-rw- 1 lalit lalit   23 Sep  8 23:14  file3.txt
+-rw-rw-rw- 1 lalit lalit   23 Sep  8 23:14  file4.txt
+-rw-rw-rw- 1 lalit lalit   23 Sep  8 23:14  file5.txt
+
+G>
+lalit@LAPTOP-GUPLKURQ:~$ ls -ld
+drwxr-xr-x 1 lalit lalit 4096 Sep  9 00:04 .
+lalit@LAPTOP-GUPLKURQ:~$

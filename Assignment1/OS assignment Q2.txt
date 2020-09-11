@@ -1,0 +1,29 @@
+Que 2>
+Ans A>
+lalit@LAPTOP-GUPLKURQ:~$ mkdir a
+lalit@LAPTOP-GUPLKURQ:~$ mkdir b
+lalit@LAPTOP-GUPLKURQ:~$ mkdir c
+lalit@LAPTOP-GUPLKURQ:~$ ls
+a  b  c 
+lalit@LAPTOP-GUPLKURQ:~$ cd a
+lalit@LAPTOP-GUPLKURQ:~/a$ touch a.txt
+lalit@LAPTOP-GUPLKURQ:~/a$ ls
+a.txt
+lalit@LAPTOP-GUPLKURQ:~/a$ cd ..
+lalit@LAPTOP-GUPLKURQ:~$ cd b
+lalit@LAPTOP-GUPLKURQ:~/b$ touch b.txt
+lalit@LAPTOP-GUPLKURQ:~/b$ cd ..
+lalit@LAPTOP-GUPLKURQ:~$ cd c
+lalit@LAPTOP-GUPLKURQ:~/c$ touch c.txt
+lalit@LAPTOP-GUPLKURQ:~$ mv c a
+lalit@LAPTOP-GUPLKURQ:~$ cd a
+lalit@LAPTOP-GUPLKURQ:~/a$ ls
+a.txt  c
+
+B>
+lalit@LAPTOP-GUPLKURQ:~$ mv b c
+
+C>
+ lalit@LAPTOP-GUPLKURQ:~$ alias myname="ls -al"
+D>
+ lalit@LAPTOP-GUPLKURQ:~$ mv a cdac

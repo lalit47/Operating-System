@@ -1,0 +1,24 @@
+Que 3>
+Answer A>
+lalit@LAPTOP-GUPLKURQ:~$ cat>file1.txt
+this is my assignment
+lalit@LAPTOP-GUPLKURQ:~$ cat file1.txt>file2.txt
+lalit@LAPTOP-GUPLKURQ:~$ cat file2.txt>file3.txt
+lalit@LAPTOP-GUPLKURQ:~$ cat file3.txt>file4.txt
+lalit@LAPTOP-GUPLKURQ:~$ cat file4.txt>file5.txt
+lalit@LAPTOP-GUPLKURQ:~$ grep 's' *file*
+file1.txt:this is my assignment
+file2.txt:this is my assignment
+file3.txt:this is my assignment
+file4.txt:this is my assignment
+file5.txt:this is my assignment
+
+B>
+lalit@LAPTOP-GUPLKURQ:~$ nano file.txt
+lalit@LAPTOP-GUPLKURQ:~$ cat file.txt
+
+C>
+ touch file1.txt file2.txt file3.txt file4.txt file5.txt
+
+D>
+  rmdir a b c

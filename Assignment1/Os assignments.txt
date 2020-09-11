@@ -1,0 +1,21 @@
+que1>
+lalit@LAPTOP-GUPLKURQ:~$ mkdir a
+lalit@LAPTOP-GUPLKURQ:~$ cd a
+lalit@LAPTOP-GUPLKURQ:~/a$ mkdir b
+lalit@LAPTOP-GUPLKURQ:~/a$ cd b
+lalit@LAPTOP-GUPLKURQ:~/a/b$ mkdir c
+lalit@LAPTOP-GUPLKURQ:~/a/b$ cd c
+
+que a>
+lalit@LAPTOP-GUPLKURQ:~/a/b/c$ touch .hidden.txt
+lalit@LAPTOP-GUPLKURQ:~/a/b/c$ cd ..
+lalit@LAPTOP-GUPLKURQ:~/a/b$ touch .hiddden.txt
+lalit@LAPTOP-GUPLKURQ:~/a/b$ cd ..
+lalit@LAPTOP-GUPLKURQ:~/a$ touch .hidddden.txt
+
+que b>
+lalit@LAPTOP-GUPLKURQ:~/a$ touch text.txt
+lalit@LAPTOP-GUPLKURQ:~/a$ cd b
+lalit@LAPTOP-GUPLKURQ:~/a/b$ touch text.txt
+lalit@LAPTOP-GUPLKURQ:~/a/b$ cd c
+lalit@LAPTOP-GUPLKURQ:~/a/b/c$ touch text.txt

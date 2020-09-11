@@ -1,0 +1,22 @@
+Que 4>
+A>
+lalit@LAPTOP-GUPLKURQ:~$ vi file1.txt
+lalit@LAPTOP-GUPLKURQ:~$ cat file1.txt
+this is my assignment
+
+B>
+lalit@LAPTOP-GUPLKURQ:~$ cat -n  file1.txt
+     1  this is my assignment
+
+C>
+lalit@LAPTOP-GUPLKURQ:~$ tac file1.txt
+i am learning new things
+hello this is my first program
+
+D>
+lalit@LAPTOP-GUPLKURQ:~$ cat file1.txt file2.txt file3.txt > file.txt
+lalit@LAPTOP-GUPLKURQ:~$ cat file.txt
+hello this is my first program
+i am learning new things
+this is my assignment
+this is my assignment

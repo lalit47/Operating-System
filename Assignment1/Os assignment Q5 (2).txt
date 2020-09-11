@@ -1,0 +1,17 @@
+Que.5>
+lalit@LAPTOP-GUPLKURQ:~$ mkdir lalit
+lalit@LAPTOP-GUPLKURQ:~$ cd lalit
+lalit@LAPTOP-GUPLKURQ:~/lalit$  touch a.txt b.txt c.txt d.sh
+a>lalit@LAPTOP-GUPLKURQ:~/lalit$ chmod 600 a.txt b.txt
+lalit@LAPTOP-GUPLKURQ:~/lalit$ cat a.txt b.txt
+lalit@LAPTOP-GUPLKURQ:~/lalit$ chmod 200 c.txt
+
+b>lalit@LAPTOP-GUPLKURQ:~/lalit$ cat c.txt
+
+c>-bash: ./d.sh: Permission denied
+lalit@LAPTOP-GUPLKURQ:~/lalit$ chmod 777 d.sh
+lalit@LAPTOP-GUPLKURQ:~/lalit$ ./d.sh 
+
+Q2>lalit@LAPTOP-GUPLKURQ:~$ chmod 100 lalit
+
+Q3>lalit@LAPTOP-GUPLKURQ:~$ chmod 400 lalit   

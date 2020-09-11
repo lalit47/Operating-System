@@ -1,0 +1,83 @@
+Que 1.
+a>
+lalit@LAPTOP-GUPLKURQ:~$ date +%D
+09/07/20
+lalit@LAPTOP-GUPLKURQ:~$ date +%d
+07
+lalit@LAPTOP-GUPLKURQ:~$ date +%a
+Mon
+lalit@LAPTOP-GUPLKURQ:~$ date +%A
+Monday
+lalit@LAPTOP-GUPLKURQ:~$ date +%h
+Sep
+lalit@LAPTOP-GUPLKURQ:~$ date +%H
+22
+lalit@LAPTOP-GUPLKURQ:~$ date +%b
+Sep
+lalit@LAPTOP-GUPLKURQ:~$ date +%B
+September
+lalit@LAPTOP-GUPLKURQ:~$ date +%m
+09
+lalit@LAPTOP-GUPLKURQ:~$ date +%y
+20
+lalit@LAPTOP-GUPLKURQ:~$ date +%Y
+2020
+lalit@LAPTOP-GUPLKURQ:~$ date +%T
+22:27:50
+lalit@LAPTOP-GUPLKURQ:~$ date +%M
+28
+lalit@LAPTOP-GUPLKURQ:~$ date +%S
+08
+b>lalit@LAPTOP-GUPLKURQ:~$ cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+lalit@LAPTOP-GUPLKURQ:~$ cal 10 2020
+    October 2020
+Su Mo Tu We Th Fr Sa
+             1  2  3
+ 4  5  6  7  8  9 10
+11 12 13 14 15 16 17
+18 19 20 21 22 23 24
+25 26 27 28 29 30 31
+
+lalit@LAPTOP-GUPLKURQ:~$ cal -3        //this command prints previous,present and next month calender
+    August 2020          September 2020         October 2020
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1         1  2  3  4  5               1  2  3
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31
+30 31
+c>
+//bc command is a basic calculator
+ 
+echo "20+5"|bc
+25
+lalit@LAPTOP-GUPLKURQ:~$ echo "20-5"|bc
+15
+lalit@LAPTOP-GUPLKURQ:~$ echo "20*5"|bc
+100
+lalit@LAPTOP-GUPLKURQ:~$ echo "20/5"|bc
+4
+lalit@LAPTOP-GUPLKURQ:~$ echo "var=10;var^=2;var"|bc
+100
+
+d>
+  who command is used to get information about 
+   1>last system boot time
+   2>current run level of system
+   3>list of logged in users 
+e>
+  whoami command print the username
+f>
+  logname command print the current logged in name
+g>
+  uname command print the basic information about computer's
+  software and hardware
