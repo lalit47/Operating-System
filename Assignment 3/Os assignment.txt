@@ -1,0 +1,191 @@
+Que1>
+#include <stdio.h>    
+#include <stdlib.h>   
+#include <unistd.h>  
+#include <sys/wait.h>                
+
+int main(void) 
+{
+  int i, pid;
+  pid = getpid();
+  printf("parent pid = %d\n", pid);
+  
+  pid = fork();
+  if (pid == 0)  
+  {
+    for (i = 0; i < 10; i++) 
+    {
+      printf("child process: %d\n",i);
+      sleep(1); 
+    }
+    printf("child exiting\n");
+    exit(0);
+  }
+  else 
+  { 
+    printf("child pid = %d\n", pid);
+    printf("waiting for child\n");
+    wait(NULL);
+    printf("child terminated\n"); 
+  }
+  printf("parent exiting\n");
+  
+  return 0;
+}
+Que 2>
+
+#include<bits/stdc++.h> 
+using namespace std; 
+
+struct Process 
+{ 
+	int pid; 
+	int bt;  
+	int priority; 
+}; 
+ 
+bool comparison(Process a, Process b) 
+{ 
+	return (a.priority > b.priority); 
+} 
+
+void findWaitingTime(Process proc[], int n, 
+					int wt[]) 
+{ 
+	 
+	wt[0] = 0; 
+
+	 
+	for (int i = 1; i < n ; i++ ) 
+		wt[i] = proc[i-1].bt + wt[i-1] ; 
+} 
+
+ 
+void findTurnAroundTime( Process proc[], int n, 
+						int wt[], int tat[]) 
+{ 
+	 
+	 
+	for (int i = 0; i < n ; i++) 
+		tat[i] = proc[i].bt + wt[i]; 
+} 
+ 
+void findavgTime(Process proc[], int n) 
+{ 
+	int wt[n], tat[n], total_wt = 0, total_tat = 0; 
+
+	 
+	findWaitingTime(proc, n, wt); 
+
+	 
+	findTurnAroundTime(proc, n, wt, tat); 
+
+	 
+	cout << "\nProcesses "<< " Burst time "
+		<< " Waiting time " << " Turn around time\n"; 
+
+	 
+	 
+	for (int i=0; i<n; i++) 
+	{ 
+		total_wt = total_wt + wt[i]; 
+		total_tat = total_tat + tat[i]; 
+		cout << " " << proc[i].pid << "\t\t"
+			<< proc[i].bt << "\t " << wt[i] 
+			<< "\t\t " << tat[i] <<endl; 
+	} 
+
+	cout << "\nAverage waiting time = "
+		<< (float)total_wt / (float)n; 
+	cout << "\nAverage turn around time = "
+		<< (float)total_tat / (float)n; 
+} 
+
+void priorityScheduling(Process proc[], int n) 
+{ 
+	 
+	sort(proc, proc + n, comparison); 
+
+	cout<< "Order in which processes gets executed \n"; 
+	for (int i = 0 ; i < n; i++) 
+		cout << proc[i].pid <<" " ; 
+
+	findavgTime(proc, n); 
+} 
+
+
+int main() 
+{ 
+	Process proc[] = {{1, 10, 2}, {2, 5, 0}, {3, 8, 1}}; 
+	int n = sizeof proc / sizeof proc[0]; 
+	priorityScheduling(proc, n); 
+	return 0; 
+} 
+
+Que 4>
+
+#include<iostream> 
+using namespace std; 
+
+
+void findWaitingTime(int processes[], int n, 
+						int bt[], int wt[]) 
+{ 
+	 
+	wt[0] = 0; 
+
+	
+	for (int i = 1; i < n ; i++ ) 
+		wt[i] = bt[i-1] + wt[i-1] ; 
+} 
+
+ 
+void findTurnAroundTime( int processes[], int n, 
+				int bt[], int wt[], int tat[]) 
+{ 
+	 
+	for (int i = 0; i < n ; i++) 
+		tat[i] = bt[i] + wt[i]; 
+} 
+
+
+void findavgTime( int processes[], int n, int bt[]) 
+{ 
+	int wt[n], tat[n], total_wt = 0, total_tat = 0; 
+
+	
+	findWaitingTime(processes, n, bt, wt); 
+
+	 
+	findTurnAroundTime(processes, n, bt, wt, tat); 
+
+	
+	cout << "Processes "<< " Burst time "
+		<< " Waiting time " << " Turn around time\n"; 
+
+	
+	for (int i=0; i<n; i++) 
+	{ 
+		total_wt = total_wt + wt[i]; 
+		total_tat = total_tat + tat[i]; 
+		cout << " " << i+1 << "\t\t" << bt[i] <<"\t "
+			<< wt[i] <<"\t\t " << tat[i] <<endl; 
+	} 
+
+	cout << "Average waiting time = "
+		<< (float)total_wt / (float)n; 
+	cout << "\nAverage turn around time = "
+		<< (float)total_tat / (float)n; 
+} 
+ 
+int main() 
+{ 
+	 
+	int processes[] = { 1, 2, 3}; 
+	int n = sizeof processes / sizeof processes[0]; 
+ 
+	int burst_time[] = {10, 5, 8}; 
+
+	findavgTime(processes, n, burst_time); 
+	return 0; 
+} 
