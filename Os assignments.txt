@@ -1,0 +1,226 @@
+Que1> 
+enter the year
+
+read y
+
+a=`expr $y % 4`
+
+b=`expr $y % 100`
+
+c=`expr $y % 400`
+
+if [ $a -eq 0 -a $b -ne 0 -o $c -eq 0 ]
+
+then
+
+echo $y is leap year
+
+else
+
+echo $y is not leap year
+
+fi
+
+Que2>
+a>
+echo "enter a number"
+read n
+if [ "$n" == 1];
+then
+ echo "Sunday" 
+elif [ "$n" == 2 ];
+then
+ echo "Monday"
+elif [ "$n" == 3 ];
+then
+ echo "Tuesday"
+elif [ "$n" == 4 ];
+then
+ echo "Wednesday"
+elif [ "$n" == 5 ];
+then
+ echo "Thursday"
+elif [ "$n" == 6 ];
+then
+ echo "Friday" 
+elif [ "$n" == 7 ];
+then
+ echo "Saturday"
+else 
+ echo "Invalid number"
+fi
+
+b>
+
+echo "enter a number"
+read n
+case $n in
+1) echo "Sunday" ;;
+2) echo "Monday" ;;
+3) echo "Tuesday" ;;
+4) echo "Wednesday" ;;
+5) echo "Thursday" ;;
+6) echo "Friday" ;;
+7) echo "Saturday" ;;
+*) echo "Invalid number" ;;
+esac
+
+Que3>
+
+a>
+
+echo "Enter Num1"
+read num1
+echo "Enter Num2"
+read num2
+echo "Enter Num3"
+read num3
+
+if [ $num1 -gt $num2 ] && [ $num1 -gt $num3 ]
+then
+    echo $num1
+elif [ $num2 -gt $num1 ] && [ $num2 -gt $num3 ]
+then
+    echo $num2
+else
+    echo $num3
+fi
+
+b>
+
+i=1
+sum=0
+
+echo "Enter Numbers"
+while [ $i -le 3 ]
+do
+  read num               
+  sum=$((sum + num))     
+  i=$((i + 1))
+done
+
+avg=$(echo $sum / 3 | bc -l)
+
+echo $avg
+
+Que 4>
+read -p "Enter a number: " number
+if [ $((number%2)) -eq 0 ]
+then
+  echo "Number is even."
+else
+  echo "Number is odd."
+fi
+
+Que 5>
+read -p "Enter month: " month
+read -p "Enter year: " year
+
+$ next=`expr $year + 1`
+$ prev=`expr $year -1`
+
+echo $(cal [ [ $(month) ] $(prev) ])
+echo $(cal [ [ $(month) ] $(next) ])
+
+Que 6>
+echo "Enter two numbers"
+read num1 num2
+sum = $(expr $num1 + $num2)
+echo "The sum is = $sum"
+
+Que 7>
+echo "Program to Find Fibonacci Series"
+  echo "How many number of terms to be generated ?"
+  read n
+  x=0
+  y=1
+  i=2
+  echo "Fibonacci Series up to $n terms :"
+  echo "$x"
+  echo "$y"
+  while [ $i -lt $n ]
+  do
+      i=`expr $i + 1 `
+      z=`expr $x + $y `
+      echo "$z"
+      x=$y
+      y=$z
+  done
+
+Que 8>
+#!/bin/bash
+read -p "Enter string:" string
+len=${#string}
+for (( i=$len-1; i>=0; i-- ))
+do
+reverse="$reverse${string:$i:1}"
+done
+echo "$reverse"
+
+Que 9>
+#!/bin/bash
+
+if [ $# != 0 ]; then
+    len=`echo $@ | wc -c`
+    len=`expr $len - 1`
+    strrev=""
+    while test $len -gt 0
+    do
+        strrev1=`echo $@ | cut -c$len`
+        strrev=$strrev$strrev1
+        len=`expr $len - 1`
+    done
+    echo $strrev
+fi
+
+Que 10>
+
+#!/bin/bash
+
+if [ $# -eq 1 ]; then
+    if [ $1 -gt 0 ]; then
+        num=$1
+        revNum=0
+        while [ $num -ne 0 ]
+        do
+            testnum=$(( $num %  10 ))
+            revNum=$(( $revNum * 10 + $testnum ))
+            num=$(( $num / 10 ))
+        done
+        echo "Reverse Number:  $revNum of $1"
+    else
+        echo "Input is less than 0, retry with a different number."
+    fi
+fi
+
+
+
+
+Que1>
+
+#Password Validation Script
+
+echo "Enter your password"
+read password
+len="${#password}"
+
+if test $len -ge 8 ; then
+    echo "$password" | grep -q [0-9]
+     if test $? -eq 0 ; then
+           echo "$password" | grep -q [A-Z]
+                if test $? -eq 0 ; then
+                    echo "$password" | grep -q [a-z]   
+                      if test $? -eq 0 ; then
+                       echo "Strong Password"
+                   else
+                       echo "Weak Password -> Should include a lower case letter."
+                   fi
+            else
+               echo "Weak Password -> Should include a capital case letter." 
+            fi
+     else
+       echo "Weak Password -> Should use numbers in your password."   
+     fi
+else
+    echo "Weak Password -> Password length should have at least 8 characters."
+fi
