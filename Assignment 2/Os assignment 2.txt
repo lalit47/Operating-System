@@ -1,0 +1,84 @@
+Q1>
+#!/bin/bash
+for i in {1..10}
+do
+        mkdir a$i
+done
+Q2>
+a>
+echo Enter String:
+        read str
+
+        echo Enter Word
+        read word
+
+        echo $str | cat > str1.txt
+
+        grep -o $word str1.txt | cat > str2.txt
+        count=`grep -c $word str2.txt`
+
+    echo Count: $count
+c>
+ length=0
+        echo Enter String1:
+        read str1
+        length=`expr $str1 | wc -c`
+        length=`expr $length - 1`
+        echo Length: $length
+d>
+
+ length=0
+        echo Enter String1:
+        read str1
+        length=`expecho Enter String1:
+        read str1
+        echo Enter String2:
+        read str2
+
+        if [ $str1 = $str2 ]
+        then
+                echo String is equal
+        else
+                echo String is not equal
+        
+e> echo Enter String1:
+        read str
+
+        len=`expr $str | wc -c`
+        len=`expr $len - 1`
+        while [ $len -gt 0 ]
+        do
+                rev=`expr $str | cut -c $len`
+                ans=$ans$rev
+                len=`expr $len - 1`
+        done
+        echo Reverse String: $ans
+Que3>
+    for j in *.html; 
+    do 
+      mv -- "$j" "${j%.html}.txt";
+    done
+Que4>
+  echo $HOME
+  echo $PATH
+  echo $SHELL
+  echo $HISTORY
+  echo $LOGNAME
+  echo $TERM
+Que6>
+echo -n "Enter file name : "
+read file
+ 
+# find out if file has write permission or not
+[ -w $file ] && W="Write = yes" || W="Write = No"
+ 
+# find out if file has excute permission or not
+[ -x $file ] && X="Execute = yes" || X="Execute = No"
+ 
+# find out if file has read permission or not
+[ -r $file ] && R="Read = yes" || R="Read = No"
+ 
+echo "$file permissions"
+echo "$W"
+echo "$R"
+echo "$X"
